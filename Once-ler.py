@@ -26,17 +26,18 @@ def send_embed(webhook_url):
     footer = "A message from bread: i saw your big mother on the orange and black hub she got the big ol saggy ass lookin ass lookin dumb ass, has not ass, gets no ass, will never have any ass, will never get any ass, got ganged on by 10 other black oily men that were 30 year old lookin ass bruh :default_dance:"
     image = "https://media.tenor.com/XMRnHdhvVvcAAAAC/cry-about-it-cry.gif"
     smallimage = "https://cdn.discordapp.com/emojis/1074467542409678971.webp?size=96&quality=lossless"
-    ilosc = 3
+    amount = 3
 
     webhook = DiscordWebhook(url=webhook_url, content='@everyone get beamed EZ 💀', username="Webhook Deleter 9000", avatar_url="https://cdn.discordapp.com/attachments/1105670577206874244/1105696732408447087/Screenshot_2022-08-24_204048.png", rate_limit_retry=True)
     
     embed = DiscordEmbed(title=title, description=message, color='FF00FF')
     embed.set_footer(text=footer, icon_url=smallimage)
     embed.set_image(url=image)
+    embed.set_author(name="Powered by Once-Ler", url="https://github.com/thetrouper/Once-ler")
 
     webhook.add_embed(embed)
 
-    for i in range(ilosc):
+    for i in range(amount):
         webhook.execute()
         print("Embed sent.")
 
